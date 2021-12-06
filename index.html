@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register Manager</title>
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        .main-div{
+            background-color: darkslategray;
+            height: 570px;
+            width: 40%;
+            margin: auto;
+            color: white;
+            text-align: center;
+            padding: 5%;
+        }
+
+        p{
+            font-size: large;
+        }
+
+        .header-div{
+            text-align: center;
+            padding-bottom: 3rem;
+        }
+
+        .bill-amount-textarea{
+            width: 100%;
+        }
+
+        .cash-given-textarea{
+            width: 100%;
+        }
+
+        #btn-chk{
+            margin: 1rem;
+        }
+
+        table{
+            width: 100%;
+            text-align: center;
+        }
+
+        .div-table{
+            padding-top: 3rem;
+        }
+
+        th, td{
+            border: 2px solid black;
+        }
+
+        .first-row{
+            background-color: white;
+            color: black;
+        }
+
+        .first-table-header{
+            background-color: darkslategray;
+            color: white;
+        }
+
+        #error-msg-one, #error-msg-two{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class = "main-div">
+        <div class = "header-div">
+            <h1>CASH REGISTER MANAGER</h1>
+            <p style = "font-size: larger;">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+        </div>
+            <p>Bill Amount:</p>
+            <input class = "bill-amount-textarea"></input>
+        <div>
+            <p>Cash Given:</p>
+            <input class = "cash-given-textarea"></input>
+            <button id = "btn-chk">Check</button>
+        </div>
+        <p id="error-msg-one">Invalid input</p>
+        <p id="error-msg-two">Cash given cannot be less than the bill amount.</p>
+        <div class="div-table">
+            <p>Return Change:</p>
+            <table>
+                <tr class = "first-row">
+                    <th class = "first-table-header">No. of notes</th>
+                    <td class = "notes"></td>
+                    <td class = "notes"></td>
+                    <td class = "notes"></td>
+                    <td class = "notes"></td>
+                    <td class = "notes"></td>
+                    <td class = "notes"></td>
+                    <td class = "notes"></td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td>2000</td>
+                    <td>500</td>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+    </div>        
+</body>
+<script src="app.js" type="text/javascript"></script>
+</html>
